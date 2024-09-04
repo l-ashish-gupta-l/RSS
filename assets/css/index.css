@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Links";
+    src: url("../Fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Headings";
+    src: url("../Fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Para";
+    src: url("../Fonts/OpenSans-Regular.ttf");
+}
+
+.Hero_left{
+      background-image: url('../images/Hero_1.jpg');
+       background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Hero_right{
+      background-image: url('../images/Hero_2.jpg');
+       background-size: cover;
+    background-repeat: no-repeat;
+}
+.Home_service{
+background-image: url('../images/Home_Service_bg.jpg');
+ background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home_portfolio{
+    background-image: url('../images/home_portfolio.jpg');
+    
+}
+
+.home_testimonial{
+    background-image: url('../images/Home_testimonial.jpg');
+     background-size: cover;
+    background-repeat: no-repeat;
+}
+.Home_FAQ{
+    background-image: url('../images/Home_FAQ.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home_help{
+    background-image: url('../images/Home_help.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer{
+    background-image: url('../images/Footer_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.About_hero{
+    background-image: url('../images/Aboutus_hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact_left{
+    background-image: url('../images/Contact_left.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+}
+.Hero_index_2{
+    background-image: url('../images/index_2_bg_hero.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+}
+.index2_hero_right{
+    background-image: url('../images/index2_hero_right.jpg');
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+}
+.ctc{
+    background-image: url('../images/Ctc_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.team{
+    background-image: url('../images/team.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 10px 0;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+    background-color: #2a2d41;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    display: none;
+    margin-left: 20px;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+}
+
+.dropdown-menu a:hover {
+    background-color: #2a2d41;
+}
+
+.dropdown-active > a {
+    border-bottom: 2px solid white;
+}
+
+.dropdown-active .dropdown-menu {
+    display: block;
+}
+
+
+
+
