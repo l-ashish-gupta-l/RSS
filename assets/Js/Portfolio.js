@@ -1,6 +1,5 @@
 import {
   setupSidebarDropdowns,
-  setupDropdown,
   initializeSidebar,
   setupScrollEffect,
 } from "./about_script.js";
@@ -38,10 +37,7 @@ async function loadContent() {
         initializeSidebar();
 
         // Set up dropdowns for the main navbar
-        setupDropdown("homeDropdownButton", "homeDropdownMenu");
-        setupDropdown("pagesDropdownButton", "pagesDropdownMenu");
-        setupDropdown("portfolioDropdownButton", "portfolioDropdownMenu");
-        setupDropdown("ServicesDropdownButton", "ServicesDropdownMenu");
+       
         setupScrollEffect();
       } else {
         console.error("Navbar or footer container element not found.");

@@ -48,34 +48,7 @@ export function setupScrollEffect() {
   });
 }
 
-export function setupDropdown(buttonId, menuId) {
-  const dropdownButton = document.getElementById(buttonId);
-  const dropdownMenu = document.getElementById(menuId);
 
-  if (!dropdownButton || !dropdownMenu) {
-    console.error(
-      `Dropdown elements not found for IDs: ${buttonId}, ${menuId}`
-    );
-    return;
-  }
-
-  // Add click-based dropdown toggle
-  dropdownButton.addEventListener("mouseenter", function () {
-    dropdownMenu.classList.remove("hidden");
-  });
-
-  dropdownButton.addEventListener("mouseleave", function () {
-    dropdownMenu.classList.add("hidden");
-  });
-
-  dropdownMenu.addEventListener("mouseenter", function () {
-    dropdownMenu.classList.remove("hidden");
-  });
-
-  dropdownMenu.addEventListener("mouseleave", function () {
-    dropdownMenu.classList.add("hidden");
-  });
-}
 
 // Initialize sidebar functionality
 export function initializeSidebar() {
@@ -113,17 +86,13 @@ async function loadContent() {
 
     if (navbarSidebarContainer) {
       const navbarContainer = document.getElementById("navbar-container");
-      const AboutUsContainer = document.getElementById("AboutUs-container");
-      const ExperienceContainer = document.getElementById(
-        "Experience-container"
-      );
+      
       const footerContainer = document.getElementById("footer-container");
       if (navbarContainer) {
         navbarContainer.innerHTML = navbarSidebarContainer.outerHTML;
-        AboutUsContainer.innerHTML = AboutUs.outerHTML;
-        ExperienceContainer.innerHTML = Experience.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
+        
         document.querySelectorAll(".link").forEach((link) => {
           link.classList.add("text-white");
         });
@@ -139,11 +108,6 @@ async function loadContent() {
         initializeSidebar();
 
         // Set up dropdowns
-        setupDropdown("homeDropdownButton", "homeDropdownMenu");
-        setupDropdown("pagesDropdownButton", "pagesDropdownMenu");
-        setupDropdown("portfolioDropdownButton", "portfolioDropdownMenu");
-        setupDropdown("ServicesDropdownButton", "ServicesDropdownMenu");
-
         setupScrollEffect();
       } else {
         console.error("Navbar container element not found.");
