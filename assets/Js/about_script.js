@@ -1,23 +1,3 @@
-export function setupSidebarDropdowns() {
-  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
-
-  dropdownToggles.forEach((toggle) => {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const parentLi = this.parentElement;
-      const isActive = parentLi.classList.contains("dropdown-active");
-
-      document.querySelectorAll(".dropdown-active").forEach((item) => {
-        item.classList.remove("dropdown-active");
-      });
-
-      if (!isActive) {
-        parentLi.classList.add("dropdown-active");
-      }
-    });
-  });
-}
-
 export function setupScrollEffect() {
   const navbar = document.getElementById("main-navbar");
   const links = document.querySelectorAll("#main-navbar .link");
@@ -48,8 +28,6 @@ export function setupScrollEffect() {
   });
 }
 
-
-
 // Initialize sidebar functionality
 export function initializeSidebar() {
   const menuBtn = document.getElementById("menu-btn");
@@ -69,7 +47,9 @@ export function initializeSidebar() {
 
 // Load content dynamically and set up functionality
 async function loadContent() {
+  const loader = document.getElementById("loader");
   try {
+    loader.classList.remove("hidden");
     const response = await fetch("../index.html");
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -86,13 +66,12 @@ async function loadContent() {
 
     if (navbarSidebarContainer) {
       const navbarContainer = document.getElementById("navbar-container");
-      
+
       const footerContainer = document.getElementById("footer-container");
       if (navbarContainer) {
         navbarContainer.innerHTML = navbarSidebarContainer.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
-        
         document.querySelectorAll(".link").forEach((link) => {
           link.classList.add("text-white");
         });
@@ -104,7 +83,6 @@ async function loadContent() {
           menuBtn.classList.add("text-white");
         }
 
-        setupSidebarDropdowns();
         initializeSidebar();
 
         // Set up dropdowns
@@ -119,6 +97,9 @@ async function loadContent() {
     }
   } catch (error) {
     console.error("Error loading navbar and sidebar:", error);
+  } finally {
+    // Hide loader once content is loaded or an error has occurred
+    loader.classList.add("hidden");
   }
 }
 

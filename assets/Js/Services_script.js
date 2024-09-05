@@ -1,11 +1,9 @@
-import {
-  setupSidebarDropdowns,
-  initializeSidebar,
-  setupScrollEffect,
-} from "./about_script.js";
+import { initializeSidebar, setupScrollEffect } from "./about_script.js";
 
 async function loadContent() {
+  const loader = document.getElementById("loader");
   try {
+    loader.classList.remove("hidden");
     const response = await fetch("../index.html");
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -37,11 +35,9 @@ async function loadContent() {
         }
 
         // Initialize sidebar and dropdowns
-        setupSidebarDropdowns();
         initializeSidebar();
 
         // Set up dropdowns for the main navbar
-        
 
         setupScrollEffect();
       } else {
@@ -87,6 +83,9 @@ async function loadContent() {
     }
   } catch (error) {
     console.error("Error loading the About_hero section:", error);
+  } finally {
+    // Hide loader once content is loaded or an error has occurred
+    loader.classList.add("hidden");
   }
 }
 
