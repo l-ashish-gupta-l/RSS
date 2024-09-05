@@ -18,33 +18,35 @@ export function setupSidebarDropdowns() {
   });
 }
 
- export function setupScrollEffect() {
-   const navbar = document.getElementById("main-navbar");
-   const links = document.querySelectorAll("#main-navbar .link"); // Select all links inside the navbar
+export function setupScrollEffect() {
+  const navbar = document.getElementById("main-navbar");
+  const links = document.querySelectorAll("#main-navbar .link");
+  const menu_btn = document.getElementById("menu-btn");
+  // Select all links inside the navbar
 
-   window.addEventListener("scroll", () => {
-     if (window.scrollY > 50) {
-       // Threshold to trigger the change
-       navbar.classList.add("bg-white", "shadow-md");
-       navbar.classList.remove("bg-transparent");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      // Threshold to trigger the change
+      navbar.classList.add("bg-white", "shadow-md");
+      navbar.classList.remove("bg-transparent");
 
-       // Change the text color of the links when scrolled down
-       links.forEach((link) => {
-         link.classList.add("text-[#1D233A]"); // Change to your desired color
-         link.classList.remove("text-white");
-       });
-     } else {
-       navbar.classList.remove("bg-white", "shadow-md");
-       navbar.classList.add("bg-transparent");
+      // Change the text color of the links when scrolled down
+      links.forEach((link) => {
+        link.classList.add("text-[#1D233A]"); // Change to your desired color
+        link.classList.remove("text-white");
+      });
+    } else {
+      navbar.classList.remove("bg-white", "shadow-md");
+      navbar.classList.add("bg-transparent");
 
-       // Revert text color to white when scrolling back to top
-       links.forEach((link) => {
-         link.classList.add("text-white");
-         link.classList.remove("text-[#1D233A]");
-       });
-     }
-   });
- }
+      // Revert text color to white when scrolling back to top
+      links.forEach((link) => {
+        link.classList.add("text-white");
+        link.classList.remove("text-[#1D233A]");
+      });
+    }
+  });
+}
 
 export function setupDropdown(buttonId, menuId) {
   const dropdownButton = document.getElementById(buttonId);
@@ -125,9 +127,12 @@ async function loadContent() {
         document.querySelectorAll(".link").forEach((link) => {
           link.classList.add("text-white");
         });
+
         const quoteBtn = document.querySelector(".quoetebtn");
+        const menuBtn = document.querySelector("#menu-btn");
         if (quoteBtn) {
           quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
+          menuBtn.classList.add("text-white");
         }
 
         setupSidebarDropdowns();

@@ -17,6 +17,10 @@
     src: url("../Fonts/OpenSans-Regular.ttf");
 }
 
+body{
+    position: relative;
+}
+
 .Hero_left{
       background-image: url('../images/Hero_1.jpg');
        background-size: contain;
@@ -119,6 +123,7 @@ background-image: url('../images/Home_Service_bg.jpg');
     padding: 0;
     display: none;
     margin-left: 20px;
+    background-color: #2a2d41;
 }
 
 .dropdown-menu li {
@@ -127,11 +132,11 @@ background-image: url('../images/Home_Service_bg.jpg');
 
 .dropdown-menu a {
     padding: 10px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid transparent;   
 }
 
 .dropdown-menu a:hover {
-    background-color: #2a2d41;
+    background-color: #505ba1;
 }
 
 .dropdown-active > a {
@@ -142,6 +147,37 @@ background-image: url('../images/Home_Service_bg.jpg');
     display: block;
 }
 
+
+/* Cursor */
+.txt-type > .txt {
+    border-right: .5rem solid #1D233A;
+}
+
+@media(min-width: 1200px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media(max-width: 800px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}
 
 
 

@@ -17,22 +17,25 @@ async function loadContent() {
 
     const navbar = doc.querySelector("#navbar-sidebar-container");
     const footer = doc.querySelector("#footer-main");
+    const Service_index = doc.querySelector("#Service_index");
 
     if (navbar && footer) {
       const navbarContainer = document.getElementById("navbar-container");
       const footerContainer = document.getElementById("footer-container");
+      const ServiceContainer = document.getElementById("Services-container");
 
       if (navbarContainer && footerContainer) {
         navbarContainer.innerHTML = navbar.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
+        ServiceContainer.innerHTML = Service_index.outerHTML;
 
-          document.querySelectorAll(".link").forEach((link) => {
-            link.classList.add("text-white");
-          });
-          const quoteBtn = document.querySelector(".quoetebtn");
-          if (quoteBtn) {
-            quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
-          }
+        document.querySelectorAll(".link").forEach((link) => {
+          link.classList.add("text-white");
+        });
+        const quoteBtn = document.querySelector(".quoetebtn");
+        if (quoteBtn) {
+          quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
+        }
 
         // Initialize sidebar and dropdowns
         setupSidebarDropdowns();

@@ -26,10 +26,11 @@ async function loadContent() {
         navbarContainer.innerHTML = navbar.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
-         document.querySelectorAll(".link").forEach((link) => {
-           link.classList.add("text-white");
-         });
-         
+        document.querySelectorAll(".link").forEach((link) => {
+          link.classList.add("text-white");
+        });
+        const menuBtn = document.querySelector("#menu-btn");
+        menuBtn.classList.add("text-white");
 
         // Initialize sidebar and dropdowns
         setupSidebarDropdowns();
