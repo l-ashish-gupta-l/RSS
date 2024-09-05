@@ -27,6 +27,22 @@ export function setupDropdown(buttonId, menuId) {
   });
 }
 
+ function setupScrollEffect() {
+  const navbar = document.getElementById("main-navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      // Threshold to trigger the change
+      navbar.classList.add("bg-white", "text-[#1D233A]", "shadow-md");
+      navbar.classList.remove("bg-transparent", "text-white");
+    } else {
+      navbar.classList.remove("bg-white", "text-[#1D233A]", "shadow-md");
+      navbar.classList.add("bg-transparent", "text-[#1D233A]");
+    }
+  });
+}
+
+setupScrollEffect();
+
 // Optionally, set up dropdowns here if needed
 setupDropdown("homeDropdownButton", "homeDropdownMenu");
 setupDropdown("pagesDropdownButton", "pagesDropdownMenu");

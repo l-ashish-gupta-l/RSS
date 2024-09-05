@@ -2,6 +2,7 @@ import {
   setupSidebarDropdowns,
   setupDropdown,
   initializeSidebar,
+  setupScrollEffect,
 } from "./about_script.js";
 
 async function loadContent() {
@@ -25,6 +26,14 @@ async function loadContent() {
         navbarContainer.innerHTML = navbar.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
+         document.querySelectorAll(".link").forEach((link) => {
+           link.classList.add("text-white");
+         });
+         const quoteBtn = document.querySelector(".quoetebtn");
+         if (quoteBtn) {
+           quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
+         }
+
         // Initialize sidebar and dropdowns
         setupSidebarDropdowns();
         initializeSidebar();
@@ -34,6 +43,8 @@ async function loadContent() {
         setupDropdown("pagesDropdownButton", "pagesDropdownMenu");
         setupDropdown("portfolioDropdownButton", "portfolioDropdownMenu");
         setupDropdown("ServicesDropdownButton", "ServicesDropdownMenu");
+
+        setupScrollEffect();
       } else {
         console.error("Navbar or footer container element not found.");
       }

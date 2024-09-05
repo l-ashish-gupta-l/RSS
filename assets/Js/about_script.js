@@ -18,6 +18,34 @@ export function setupSidebarDropdowns() {
   });
 }
 
+ export function setupScrollEffect() {
+   const navbar = document.getElementById("main-navbar");
+   const links = document.querySelectorAll("#main-navbar .link"); // Select all links inside the navbar
+
+   window.addEventListener("scroll", () => {
+     if (window.scrollY > 50) {
+       // Threshold to trigger the change
+       navbar.classList.add("bg-white", "shadow-md");
+       navbar.classList.remove("bg-transparent");
+
+       // Change the text color of the links when scrolled down
+       links.forEach((link) => {
+         link.classList.add("text-[#1D233A]"); // Change to your desired color
+         link.classList.remove("text-white");
+       });
+     } else {
+       navbar.classList.remove("bg-white", "shadow-md");
+       navbar.classList.add("bg-transparent");
+
+       // Revert text color to white when scrolling back to top
+       links.forEach((link) => {
+         link.classList.add("text-white");
+         link.classList.remove("text-[#1D233A]");
+       });
+     }
+   });
+ }
+
 export function setupDropdown(buttonId, menuId) {
   const dropdownButton = document.getElementById(buttonId);
   const dropdownMenu = document.getElementById(menuId);
@@ -94,6 +122,14 @@ async function loadContent() {
         ExperienceContainer.innerHTML = Experience.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
+        document.querySelectorAll(".link").forEach((link) => {
+          link.classList.add("text-white");
+        });
+        const quoteBtn = document.querySelector(".quoetebtn");
+        if (quoteBtn) {
+          quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
+        }
+
         setupSidebarDropdowns();
         initializeSidebar();
 
@@ -102,6 +138,8 @@ async function loadContent() {
         setupDropdown("pagesDropdownButton", "pagesDropdownMenu");
         setupDropdown("portfolioDropdownButton", "portfolioDropdownMenu");
         setupDropdown("ServicesDropdownButton", "ServicesDropdownMenu");
+
+        setupScrollEffect();
       } else {
         console.error("Navbar container element not found.");
       }

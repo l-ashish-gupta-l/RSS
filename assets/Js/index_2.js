@@ -2,6 +2,7 @@ import {
   setupSidebarDropdowns,
   setupDropdown,
   initializeSidebar,
+  setupScrollEffect,
 } from "./about_script.js";
 
 async function loadContent() {
@@ -25,9 +26,15 @@ async function loadContent() {
         navbarContainer.innerHTML = navbar.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
+         document.querySelectorAll(".link").forEach((link) => {
+           link.classList.add("text-white");
+         });
+         
+
         // Initialize sidebar and dropdowns
         setupSidebarDropdowns();
         initializeSidebar();
+        setupScrollEffect();
 
         // Set up dropdowns for the main navbar
         setupDropdown("homeDropdownButton", "homeDropdownMenu");

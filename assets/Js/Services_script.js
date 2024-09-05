@@ -1,41 +1,8 @@
-// async function loadContent() {
-//   try {
-//     const response = await fetch("../index.html");
-//     if (!response.ok) {
-//       throw new Error(`Network response was not ok: ${response.statusText}`);
-//     }
-//     const text = await response.text();
-//     const parser = new DOMParser();
-//     const doc = parser.parseFromString(text, "text/html");
-
-//     const navbar = doc.querySelector("#main-navbar");
-//     const footer = doc.querySelector("#footer-main");
-//     const Services = doc.querySelector("#Services");
-
-//     if (navbar && footer) {
-//       const navbarContainer = document.getElementById("navbar-container");
-//       const footerContainer = document.getElementById("footer-container");
-//       const ServicesContainer = document.getElementById("Services-container");
-
-//       if (navbarContainer && footerContainer) {
-//         navbarContainer.innerHTML = navbar.outerHTML;
-//         footerContainer.innerHTML = footer.outerHTML;
-//         ServicesContainer.innerHTML = Services.outerHTML;
-
-//       } else {
-//         console.error("Navbar or footer container element not found.");
-//       }
-//     } else {
-//       console.error("Navbar or footer element not found in the index.html.");
-//     }
-//   } catch (error) {
-//     console.error("Error loading navbar or footer:", error);
-//   }
-
 import {
   setupSidebarDropdowns,
   setupDropdown,
   initializeSidebar,
+  setupScrollEffect,
 } from "./about_script.js";
 
 async function loadContent() {
@@ -59,6 +26,14 @@ async function loadContent() {
         navbarContainer.innerHTML = navbar.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
+          document.querySelectorAll(".link").forEach((link) => {
+            link.classList.add("text-white");
+          });
+          const quoteBtn = document.querySelector(".quoetebtn");
+          if (quoteBtn) {
+            quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
+          }
+
         // Initialize sidebar and dropdowns
         setupSidebarDropdowns();
         initializeSidebar();
@@ -68,6 +43,8 @@ async function loadContent() {
         setupDropdown("pagesDropdownButton", "pagesDropdownMenu");
         setupDropdown("portfolioDropdownButton", "portfolioDropdownMenu");
         setupDropdown("ServicesDropdownButton", "ServicesDropdownMenu");
+
+        setupScrollEffect();
       } else {
         console.error("Navbar or footer container element not found.");
       }
