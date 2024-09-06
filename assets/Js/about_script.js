@@ -66,10 +66,11 @@ async function loadContent() {
 
     if (navbarSidebarContainer) {
       const navbarContainer = document.getElementById("navbar-container");
-
+      const AboutUsconatiner = document.getElementById("AboutUs-container");
       const footerContainer = document.getElementById("footer-container");
       if (navbarContainer) {
         navbarContainer.innerHTML = navbarSidebarContainer.outerHTML;
+        AboutUsconatiner.innerHTML = AboutUs.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
 
         document.querySelectorAll(".link").forEach((link) => {
