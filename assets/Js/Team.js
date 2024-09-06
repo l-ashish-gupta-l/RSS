@@ -1,9 +1,12 @@
-import { initializeSidebar, setupScrollEffect } from "./about_script.js";
+import {
+  setupSidebarDropdowns,
+  setupDropdown,
+  initializeSidebar,
+  setupScrollEffect,
+} from "./about_script.js";
 
 async function loadContent() {
-  const loader = document.getElementById("loader");
   try {
-    loader.classList.remove("hidden");
     const response = await fetch("../index.html");
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -14,17 +17,14 @@ async function loadContent() {
 
     const navbar = doc.querySelector("#navbar-sidebar-container");
     const footer = doc.querySelector("#footer-main");
-    const Service_index = doc.querySelector("#Service_index");
 
     if (navbar && footer) {
       const navbarContainer = document.getElementById("navbar-container");
       const footerContainer = document.getElementById("footer-container");
-      const ServiceContainer = document.getElementById("Services-container");
 
       if (navbarContainer && footerContainer) {
         navbarContainer.innerHTML = navbar.outerHTML;
         footerContainer.innerHTML = footer.outerHTML;
-        ServiceContainer.innerHTML = Service_index.outerHTML;
 
         document.querySelectorAll(".link").forEach((link) => {
           link.classList.add("text-white");
@@ -35,10 +35,14 @@ async function loadContent() {
         }
 
         // Initialize sidebar and dropdowns
+        setupSidebarDropdowns();
         initializeSidebar();
 
         // Set up dropdowns for the main navbar
-
+        setupDropdown("homeDropdownButton", "homeDropdownMenu");
+        setupDropdown("pagesDropdownButton", "pagesDropdownMenu");
+        setupDropdown("portfolioDropdownButton", "portfolioDropdownMenu");
+        setupDropdown("ServicesDropdownButton", "ServicesDropdownMenu");
         setupScrollEffect();
       } else {
         console.error("Navbar or footer container element not found.");
@@ -48,7 +52,8 @@ async function loadContent() {
     }
   } catch (error) {
     console.error("Error loading navbar or footer:", error);
-  } 
+  }
+
   try {
     const response = await fetch("aboutUs.html");
     if (!response.ok) {
@@ -64,16 +69,15 @@ async function loadContent() {
       if (container) {
         container.appendChild(section);
 
-        // Check if the page is Services detail
-        const isServicesDetail =
-          window.location.pathname.includes("Services_detail");
+        // Check if the page is Team detail
+        const isTeamDetail = window.location.pathname.includes("Team_detail");
 
-        if (isServicesDetail) {
-          section.querySelector("h1").innerText = "Services Details";
-          section.querySelector("h2").innerText = "Home -> Services Details";
+        if (isTeamDetail) {
+          section.querySelector("h1").innerText = "Team Details";
+          section.querySelector("h2").innerText = "Home -> Team Details";
         } else {
-          section.querySelector("h1").innerText = "Services";
-          section.querySelector("h2").innerText = "Home -> Services";
+          section.querySelector("h1").innerText = "Team";
+          section.querySelector("h2").innerText = "Home -> Team";
         }
       } else {
         console.error("Hero container element not found.");
@@ -83,9 +87,6 @@ async function loadContent() {
     }
   } catch (error) {
     console.error("Error loading the About_hero section:", error);
-  } finally {
-    // Hide loader once content is loaded or an error has occurred
-    loader.classList.add("hidden");
   }
 }
 

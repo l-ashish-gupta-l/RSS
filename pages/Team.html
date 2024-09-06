@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,38 +12,19 @@
     />
     <link href="../assets/css/output.css" rel="stylesheet" />
     <link href="../assets/css/index.css" rel="stylesheet" />
-    <title>Document</title>
   </head>
   <body>
-    <div id="loader" class="loader">
-      <div class="spinner"></div>
-    </div>
-
     <!-- Navbar -->
     <div id="navbar-container"></div>
     <!-- /Navbar -->
     <!-- Hero section -->
-    <section
-      class="About_hero w-full h-screen px-20 flex justify-between items-center"
-    >
-      <div>
-        <h1 class="font-[Headings] text-white text-5xl">About us</h1>
-      </div>
-      <img src="/assets/images/aboutus_assest1.png" alt="aboutus_assest1" />
-      <h2
-        class="font-[Headings] text-white text-2xl mt-3 hidden md:flex justify-center items-center gap-3"
-      >
-        Home
-        <span><img src="/assets/images/arrow_svg.svg" /></span> About
-      </h2>
-    </section>
+    <div id="Hero-container"></div>
     <!-- /Hero section -->
-    <!-- About us -->
-    <div id="AboutUs-container"></div>
-    <div id="Experience-container"></div>
     <!-- Team -->
-    <section class="team w-full " style="height: 130vh">
-      <div class="w-full  flex mt-20 justify-start items-center flex-col">
+    <section class="team w-full border" style="height: 130vh">
+      <div
+        class="w-full h-full border-black flex mt-20 justify-start items-center flex-col"
+      >
         <h3 class="text-xl mb-3 uppercase font-[Headings] text-[#7432FF]">
           Let's Create Something
         </h3>
@@ -55,23 +37,51 @@
           Draw a line in the sand quick win. My capacity is full. Keep it lean
           gain alignment we need to future-proof this plan.
         </p>
-        <div class="border w-full  flex justify-center items-center">
-          <div class="border"></div>
+        <div class="w-full h-1/2 mt-10 border px-20 flex justify-center">
+          <div
+            class="w-full h-full border flex justify-center items-center gap-5"
+          >
+            <div
+              class="w-1/4 border h-2/3 relative flex justify-center items-center"
+            >
+              <div
+                class="absolute -bottom-10 border w-3/4 h-[40%] rounded-xl"
+              ></div>
+            </div>
+            <div
+              class="w-1/4 border h-2/3 relative flex justify-center items-center"
+            >
+              <div
+                class="absolute -bottom-10 border w-3/4 h-[40%] rounded-xl"
+              ></div>
+            </div>
+            <div
+              class="w-1/4 border h-2/3 relative flex justify-center items-center"
+            >
+              <div
+                class="absolute -bottom-10 border w-3/4 h-[40%] rounded-xl"
+              ></div>
+            </div>
+            <div
+              class="w-1/4 border h-2/3 relative flex justify-center items-center"
+            >
+              <div
+                class="absolute -bottom-10 border w-3/4 h-[40%] rounded-xl"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <!-- /Team -->
-
+    <!-- Footer -->
     <div id="footer-container"></div>
-
-    <!-- /About us -->
-
-    <script type="module" src="../assets/Js/about_script.js"></script>
-
+    <!-- /Footer -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="../assets/Js/Team.js"></script>
   </body>
 </html>

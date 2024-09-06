@@ -6,7 +6,7 @@ import {
 async function loadContent() {
    const loader = document.getElementById("loader");
   try {
-     loader.classList.remove("hidden");
+    loader.classList.remove("hidden");
     const response = await fetch("../index.html");
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
@@ -45,7 +45,7 @@ async function loadContent() {
     }
   } catch (error) {
     console.error("Error loading navbar or footer:", error);
-  }
+  } 
 
   try {
     const response = await fetch("aboutUs.html");
@@ -78,3 +78,5 @@ async function loadContent() {
 }
 
 document.addEventListener("DOMContentLoaded", loadContent);
+
+

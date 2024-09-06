@@ -11,12 +11,13 @@
       crossorigin="anonymous"
     />
     <link href="../assets/css/output.css" rel="stylesheet" />
+    <link href="../assets/css/index.css" rel="stylesheet" />
   </head>
   <body>
     <div id="loader" class="loader">
-    <div class="spinner"></div>
-  </div>
-  
+      <div class="spinner"></div>
+    </div>
+
     <!-- Navbar -->
     <div id="navbar-container"></div>
     <!-- /Navbar -->
@@ -26,7 +27,7 @@
     <!-- Works -->
     <section
       id="works"
-      class="w-full border px-20 mt-20 flex justify-center items-center flex-col"
+      class="w-full border h-screen px-20 mt-20 flex justify-center items-center flex-col"
     >
       <div class="w-full flex justify-center items-center flex-col">
         <h3 class="text-xl uppercase font-[Headings] text-[#7432FF]">
@@ -37,123 +38,73 @@
         >
           Some of our amazing works
         </h1>
-        <div class="w-1/2 border border-black flex mt-16">
-          <ul
-            class="flex w-full text-[#1D233A] justify-between text-base items-center font-[Headings] uppercase"
-          >
-            <li>SHOW ALL</li>
-            <li>UI/UX Design</li>
-            <li>Marketing</li>
-            <li>Development</li>
-          </ul>
-        </div>
       </div>
-      <div class="w-full px-20 border h-fit mt-20 grid grid-cols-2 gap-4">
-        <div class="card">
-          <img  class="card-img-top w-full" alt="" />
-          <div class="card-body p-4">
-            <h5 class="card-title text-xl font-semibold">Card title</h5>
-            <p class="card-text text-gray-700">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img  class="card-img-top w-full" alt="" />
-          <div class="card-body p-4">
-            <h5 class="card-title text-xl font-semibold">Card title</h5>
-            <p class="card-text text-gray-700">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Works -->
-
-    <!-- new works -->
-    <section class="w-full h-screen my-12 md:py-20 lg:py-28">
-      <div class="container grid gap-8 px-4 md:px-6 lg:gap-12">
-        <div class="space-y-3 text-center">
-          <h2
-            class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-          >
-            Featured Projects
-          </h2>
-          <p
-            class="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-          >
-            A selection of my most recent and notable projects, showcasing my
-            design and development skills.
-          </p>
-        </div>
-        <div class="grid gap-6 grid-cols-3">
-          <div
-            class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
-          >
-            <a class="absolute inset-0 z-10" href="#">
-              <span class="sr-only">View project</span>
-            </a>
-            <img
-              src=""
-              width="500"
-              height="300"
-              style="aspect-ratio: 500 / 300; object-fit: cover"
-              alt="Project 1"
-              class="object-cover w-full h-64"
-            />
-            <div class="p-4 bg-background">
-              <h3 class="text-xl font-bold">Project 1</h3>
-              <p class="text-sm text-muted-foreground">
-                A modern and responsive web application built with the latest
-                technologies.
-              </p>
+      <!-- /Works -->
+      <!-- new works -->
+          <div class="grid gap-6 grid-cols-3 mt-10 ">
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
+            >
+              <a class="absolute inset-0 z-10" href="#">
+                <span class="sr-only">View project</span>
+              </a>
+              <img
+                src=""
+                width="500"
+                height="300"
+                style="aspect-ratio: 500 / 300; object-fit: cover"
+                alt="Project 1"
+                class="object-cover w-full h-64"
+              />
+              <div class="p-4 bg-background">
+                <h3 class="text-xl font-bold">Project 1</h3>
+                <p class="text-sm text-muted-foreground">
+                  A modern and responsive web application built with the latest
+                  technologies.
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
-          >
-            <a class="absolute inset-0 z-10" href="#">
-              <span class="sr-only">View project</span>
-            </a>
-            <img
-              src=""
-              alt="Project 2"
-              width="500"
-              height="300"
-              class="object-cover w-full h-64"
-              style="aspect-ratio: 500 / 300; object-fit: cover"
-            />
-            <div class="p-4 bg-background">
-              <h3 class="text-xl font-bold">Project 2</h3>
-              <p class="text-sm text-muted-foreground">
-                A sleek and intuitive mobile app designed for seamless user
-                experience.
-              </p>
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
+            >
+              <a class="absolute inset-0 z-10" href="#">
+                <span class="sr-only">View project</span>
+              </a>
+              <img
+                src=""
+                alt="Project 2"
+                width="500"
+                height="300"
+                class="object-cover w-full h-64"
+                style="aspect-ratio: 500 / 300; object-fit: cover"
+              />
+              <div class="p-4 bg-background">
+                <h3 class="text-xl font-bold">Project 2</h3>
+                <p class="text-sm text-muted-foreground">
+                  A sleek and intuitive mobile app designed for seamless user
+                  experience.
+                </p>
+              </div>
             </div>
-          </div>
-          <div
-            class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
-          >
-            <a class="absolute inset-0 z-10" href="#">
-              <span class="sr-only">View project</span>
-            </a>
-            <img
-              src=""
-              alt="Project 3"
-              width="500"
-              height="300"
-              class="object-cover w-full h-64"
-              style="aspect-ratio: 500 / 300; object-fit: cover"
-            />
-            <div class="p-4 bg-background">
-              <h3 class="text-xl font-bold">Project 3</h3>
-              <p class="text-sm text-muted-foreground"></p>
+            <div
+              class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
+            >
+              <a class="absolute inset-0 z-10" href="#">
+                <span class="sr-only">View project</span>
+              </a>
+              <img
+                src=""
+                alt="Project 3"
+                width="500"
+                height="300"
+                class="object-cover w-full h-64"
+                style="aspect-ratio: 500 / 300; object-fit: cover"
+              />
+              <div class="p-4 bg-background">
+                <h3 class="text-xl font-bold">Project 3</h3>
+                <p class="text-sm text-muted-foreground"></p>
+              </div>
             </div>
-          </div>
-        </div>
       </div>
     </section>
     <!-- /new works -->
@@ -164,7 +115,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
-    ></script>  
+    ></script>
     <script type="module" src="/assets/Js/Portfolio.js"></script>
   </body>
 </html>
