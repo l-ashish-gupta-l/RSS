@@ -25,88 +25,81 @@
     <div id="Hero-container"></div>
     <!-- /Hero section -->
     <!-- Works -->
-    <section
-      id="works"
-      class="w-full border h-screen px-20 mt-20 flex justify-center items-center flex-col"
-    >
-      <div class="w-full flex justify-center items-center flex-col">
-        <h3 class="text-xl uppercase font-[Headings] text-[#7432FF]">
-          Portfolio
-        </h3>
-        <h1
-          class="text-5xl mt-3 font-[Headings] relative z-20 text-[#1D233A] after:absolute after:w-full after:h-2 after:bg-[#a76e31] after:left-0 after:bottom-2 after:opacity-30 after:z-10 after:rounded-md"
-        >
-          Some of our amazing works
-        </h1>
+    <section id="works" class="w-full h-auto px-5 md:px-20 mt-20 flex flex-col items-center">
+  <!-- Header Section -->
+  <div class="w-full flex flex-col items-center">
+    <h3 class="text-lg md:text-xl uppercase font-[Headings] text-[#7432FF]">
+      Portfolio
+    </h3>
+    <h1 class="text-2xl md:text-4xl lg:text-5xl mt-3 font-[Headings] relative z-20 text-[#1D233A] after:absolute after:w-[75%] md:after:w-full after:h-2 after:bg-[#a76e31] after:left-0 after:bottom-2 after:opacity-30 after:rounded-md">
+      Some of our amazing works
+    </h1>
+  </div>
+
+  <!-- Portfolio Grid Section -->
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-10 w-full">
+    <!-- Project 1 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2">
+      <a class="absolute inset-0 z-10" href="#">
+        <span class="sr-only">View project</span>
+      </a>
+      <img
+        src=""
+        width="500"
+        height="300"
+        alt="Project 1"
+        class="object-cover w-full h-48 md:h-64"
+        style="aspect-ratio: 500 / 300; object-fit: cover"
+      />
+      <div class="p-4 bg-background">
+        <h3 class="text-lg md:text-xl font-bold">Project 1</h3>
+        <p class="text-sm text-muted-foreground">
+          A modern and responsive web application built with the latest technologies.
+        </p>
       </div>
-      <!-- /Works -->
-      <!-- new works -->
-          <div class="grid gap-6 grid-cols-3 mt-10 ">
-            <div
-              class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
-            >
-              <a class="absolute inset-0 z-10" href="#">
-                <span class="sr-only">View project</span>
-              </a>
-              <img
-                src=""
-                width="500"
-                height="300"
-                style="aspect-ratio: 500 / 300; object-fit: cover"
-                alt="Project 1"
-                class="object-cover w-full h-64"
-              />
-              <div class="p-4 bg-background">
-                <h3 class="text-xl font-bold">Project 1</h3>
-                <p class="text-sm text-muted-foreground">
-                  A modern and responsive web application built with the latest
-                  technologies.
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
-            >
-              <a class="absolute inset-0 z-10" href="#">
-                <span class="sr-only">View project</span>
-              </a>
-              <img
-                src=""
-                alt="Project 2"
-                width="500"
-                height="300"
-                class="object-cover w-full h-64"
-                style="aspect-ratio: 500 / 300; object-fit: cover"
-              />
-              <div class="p-4 bg-background">
-                <h3 class="text-xl font-bold">Project 2</h3>
-                <p class="text-sm text-muted-foreground">
-                  A sleek and intuitive mobile app designed for seamless user
-                  experience.
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2"
-            >
-              <a class="absolute inset-0 z-10" href="#">
-                <span class="sr-only">View project</span>
-              </a>
-              <img
-                src=""
-                alt="Project 3"
-                width="500"
-                height="300"
-                class="object-cover w-full h-64"
-                style="aspect-ratio: 500 / 300; object-fit: cover"
-              />
-              <div class="p-4 bg-background">
-                <h3 class="text-xl font-bold">Project 3</h3>
-                <p class="text-sm text-muted-foreground"></p>
-              </div>
-            </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2">
+      <a class="absolute inset-0 z-10" href="#">
+        <span class="sr-only">View project</span>
+      </a>
+      <img
+        src=""
+        alt="Project 2"
+        width="500"
+        height="300"
+        class="object-cover w-full h-48 md:h-64"
+        style="aspect-ratio: 500 / 300; object-fit: cover"
+      />
+      <div class="p-4 bg-background">
+        <h3 class="text-lg md:text-xl font-bold">Project 2</h3>
+        <p class="text-sm text-muted-foreground">
+          A sleek and intuitive mobile app designed for seamless user experience.
+        </p>
       </div>
-    </section>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out group hover:shadow-xl hover:-translate-y-2">
+      <a class="absolute inset-0 z-10" href="#">
+        <span class="sr-only">View project</span>
+      </a>
+      <img
+        src=""
+        alt="Project 3"
+        width="500"
+        height="300"
+        class="object-cover w-full h-48 md:h-64"
+        style="aspect-ratio: 500 / 300; object-fit: cover"
+      />
+      <div class="p-4 bg-background">
+        <h3 class="text-lg md:text-xl font-bold">Project 3</h3>
+        <p class="text-sm text-muted-foreground"></p>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- /new works -->
     <!-- Footer -->
     <div id="footer-container"></div>

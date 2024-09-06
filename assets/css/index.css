@@ -21,71 +21,48 @@ body{
     position: relative;
 }
 
-.Hero_left{
-      background-image: url('../images/Hero_1.jpg');
-       background-size: contain;
-    background-repeat: no-repeat;
-}
+
 
 .Hero_right{
-      background-image: url('../images/Hero_2.jpg');
+      background-image: url('../images/Hero_2.webp');
        background-size: cover;
     background-repeat: no-repeat;
 }
 .Home_service{
-background-image: url('../images/Home_Service_bg.jpg');
+background-image: url('../images/Home_Service_bg.webp');
  background-size: cover;
     background-repeat: no-repeat;
 }
 
 .home_portfolio{
-    background-image: url('../images/home_portfolio.jpg');
+    background-image: url('../images/home_portfolio.webp');
     
 }
 
 .home_testimonial{
-    background-image: url('../images/Home_testimonial.jpg');
+    background-image: url('../images/Home_testimonial.webp');
      background-size: cover;
     background-repeat: no-repeat;
 }
 .contact{
-    background-image: url('../images/contact_bg.jpg');
+    background-image: url('../images/contact_bg.webp');
      background-size: cover;
     background-repeat: no-repeat;
 }
-.Home_FAQ{
-    background-image: url('../images/Home_FAQ.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.home_help{
-    background-image: url('../images/Home_help.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 .footer{
-    background-image: url('../images/Footer_bg.jpg');
+    background-image: url('../images/Footer_bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .About_hero{
-    background-image: url('../images/Aboutus_hero.jpg');
+    background-image: url('../images/Aboutus_hero.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
 .contact_left{
     background-image: url('../images/Contact_left.jpg');
-    /* background-size: cover; */
-    background-repeat: no-repeat;
-}
-.Hero_index_2{
-    background-image: url('../images/index_2_bg_hero.jpg');
-    /* background-size: cover; */
-    background-repeat: no-repeat;
-}
-.index2_hero_right{
-    background-image: url('../images/index2_hero_right.jpg');
     /* background-size: cover; */
     background-repeat: no-repeat;
 }

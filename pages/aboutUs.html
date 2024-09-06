@@ -22,32 +22,45 @@
     <div id="navbar-container"></div>
     <!-- /Navbar -->
     <!-- Hero section -->
+
     <section
-      class="About_hero w-full h-screen px-20 flex justify-between items-center"
+      class="About_hero w-full h-screen px-5 md:px-10 lg:px-20 flex flex-col md:flex-row justify-center md:justify-between items-center text-center md:text-left"
     >
-      <div>
-        <h1 class="font-[Headings] text-white text-5xl">About us</h1>
+      <div class="mb-5 md:mb-0">
+        <h1 class="font-[Headings] text-white text-4xl md:text-5xl">
+          About Us
+        </h1>
       </div>
-      <img src="/assets/images/aboutus_assest1.png" alt="aboutus_assest1" />
+
+      <img
+        src="/assets/images/aboutus_assest1.webp"
+        alt="About Us Asset"
+        class="w-2/3 md:w-10 mx-auto md:mx-0"
+      />
+
       <h2
-        class="font-[Headings] text-white text-2xl mt-3 hidden md:flex justify-center items-center gap-3"
+        class="font-[Headings] text-white text-xl md:text-2xl mt-3 hidden md:flex justify-center md:justify-start items-center gap-2 md:gap-3"
       >
         Home
-        <span><img src="/assets/images/arrow_svg.svg" /></span> About
+        <span
+          ><img src="/assets/images/arrow_svg.svg" class="w-4 md:w-5"
+        /></span>
+        About
       </h2>
     </section>
+
     <!-- /Hero section -->
     <!-- About us -->
     <div id="AboutUs-container"></div>
     <div id="Experience-container"></div>
     <!-- Team -->
-    <section class="team w-full h-auto " >
-      <div class="w-full flex mt-20 justify-start items-center flex-col">
+    <section class="team w-full h-auto border p-20 ">
+      <div class="w-full flex  justify-start my-20 items-center flex-col">
         <h3 class="text-xl mb-3 uppercase font-[Headings] text-[#7432FF]">
           Let's Create Something
         </h3>
         <h1
-          class="text-5xl font-[Headings] relative z-20 text-[#1D233A] after:absolute after:w-full after:h-2 after:bg-[#a76e31] after:left-0 after:bottom-2 after:opacity-30 after:z-10 after:rounded-md"
+          class="text-3xl md:text-5xl font-[Headings] relative z-20 text-[#1D233A] after:absolute after:w-full after:h-2 after:bg-[#a76e31] after:left-0 after:bottom-2 after:opacity-30 after:z-10 after:rounded-md"
         >
           Our beloved creative team
         </h1>
@@ -55,24 +68,22 @@
           Draw a line in the sand quick win. My capacity is full. Keep it lean
           gain alignment we need to future-proof this plan.
         </p>
-        <section class="bg-white  w-full">
+        <section class="bg-white w-full">
           <div
             class="py-8 px-4 mx-auto h-auto max-w-screen-xl lg:py-16 lg:px-6 grid grid-cols-2 lg:flex gap-5"
           >
             <div
-              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex  "
+              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex"
             >
               <a href="#">
                 <img
-                  class=" rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  class="rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                   alt="Bonnie Avatar"
                 />
               </a>
               <div class="px-3 py-3">
-                <h3
-                  class="text-xl font-bold tracking-tight text-gray-900 "
-                >
+                <h3 class="text-xl font-bold tracking-tight text-gray-900">
                   <a href="#">Bonnie Green</a>
                 </h3>
                 <span class="text-gray-500 dark:text-gray-400"
@@ -86,10 +97,7 @@
                 </p>
                 <ul class="flex gap-3 sm:mt-0">
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -105,10 +113,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -122,10 +127,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -141,10 +143,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -163,19 +162,17 @@
               </div>
             </div>
             <div
-              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex  "
+              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex"
             >
               <a href="#">
                 <img
-                  class=" rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  class="rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                   alt="Bonnie Avatar"
                 />
               </a>
               <div class="px-3 py-3">
-                <h3
-                  class="text-xl font-bold tracking-tight text-gray-900 "
-                >
+                <h3 class="text-xl font-bold tracking-tight text-gray-900">
                   <a href="#">Bonnie Green</a>
                 </h3>
                 <span class="text-gray-500 dark:text-gray-400"
@@ -189,10 +186,7 @@
                 </p>
                 <ul class="flex gap-3 sm:mt-0">
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -208,10 +202,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -225,10 +216,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -244,10 +232,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -266,19 +251,17 @@
               </div>
             </div>
             <div
-              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex  "
+              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex"
             >
               <a href="#">
                 <img
-                  class=" rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  class="rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                   alt="Bonnie Avatar"
                 />
               </a>
               <div class="px-3 py-3">
-                <h3
-                  class="text-xl font-bold tracking-tight text-gray-900 "
-                >
+                <h3 class="text-xl font-bold tracking-tight text-gray-900">
                   <a href="#">Bonnie Green</a>
                 </h3>
                 <span class="text-gray-500 dark:text-gray-400"
@@ -292,10 +275,7 @@
                 </p>
                 <ul class="flex gap-3 sm:mt-0">
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -311,10 +291,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -328,10 +305,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -347,10 +321,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -369,19 +340,17 @@
               </div>
             </div>
             <div
-              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex  "
+              class="card items-center lg:w-1/2 bg-gray-50 rounded-lg shadow sm:flex"
             >
               <a href="#">
                 <img
-                  class=" rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  class="rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                   alt="Bonnie Avatar"
                 />
               </a>
               <div class="px-3 py-3">
-                <h3
-                  class="text-xl font-bold tracking-tight text-gray-900 "
-                >
+                <h3 class="text-xl font-bold tracking-tight text-gray-900">
                   <a href="#">Bonnie Green</a>
                 </h3>
                 <span class="text-gray-500 dark:text-gray-400"
@@ -395,10 +364,7 @@
                 </p>
                 <ul class="flex gap-3 sm:mt-0">
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -414,10 +380,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -431,10 +394,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -450,10 +410,7 @@
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      class="text-gray-500 hover:text-gray-900 "
-                    >
+                    <a href="#" class="text-gray-500 hover:text-gray-900">
                       <svg
                         class="w-5 h-5"
                         fill="currentColor"
@@ -471,7 +428,6 @@
                 </ul>
               </div>
             </div>
-            
           </div>
         </section>
       </div>
