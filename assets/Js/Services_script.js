@@ -67,14 +67,13 @@ async function loadContent() {
         // Check if the page is Services detail
         const isServicesDetail =
           window.location.pathname.includes("Services_detail");
-
-        if (isServicesDetail) {
-          section.querySelector("h1").innerText = "Services Details";
-          section.querySelector("h2").innerText = "Home -> Services Details";
-        } else {
-          section.querySelector("h1").innerText = "Services";
-          section.querySelector("h2").innerText = "Home -> Services";
-        }
+          if (isServicesDetail) {
+            section.querySelector("h1").innerText = "Services Details";
+            section.querySelector("h2").innerHTML = `Home <span><img src="/assets/images/arrow_svg.svg" class="w-4 md:w-5" /></span> Services Details`;
+          } else {
+            section.querySelector("h1").innerText = "Services";
+            section.querySelector("h2").innerHTML = `Home <span><img src="/assets/images/arrow_svg.svg" class="w-4 md:w-5" /></span> Services`;
+          }
       } else {
         console.error("Hero container element not found.");
       }

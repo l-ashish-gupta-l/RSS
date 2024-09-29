@@ -56,13 +56,19 @@ async function loadContent() {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
     const section = doc.querySelector(".About_hero");
-
+  
     if (section) {
       const container = document.getElementById("Hero-container");
       if (container) {
         container.appendChild(section);
+  
+        // Update h1 for Contact Us page
         section.querySelector("h1").innerText = "Contact Us";
-        section.querySelector("h2").innerText = "Home -> Contact Us";
+  
+        // Update h2 text and include the arrow image properly
+        const h2 = section.querySelector("h2");
+        h2.innerHTML = `Home <span><img src="/assets/images/arrow_svg.svg" class="w-4 md:w-5" /></span> Contact Us`;
+  
       } else {
         console.error("Hero container element not found.");
       }
@@ -75,7 +81,7 @@ async function loadContent() {
     // Hide loader once content is loaded or an error has occurred
     loader.classList.add("hidden");
   }
-}
+}  
 
 document.addEventListener("DOMContentLoaded", loadContent);
 

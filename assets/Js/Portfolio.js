@@ -58,22 +58,28 @@ async function loadContent() {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
     const section = doc.querySelector(".About_hero");
-
+  
     if (section) {
       const container = document.getElementById("Hero-container");
       if (container) {
         container.appendChild(section);
-
-        // Check if the page is portfolio detail
+  
+        // Check if the page is a Portfolio detail page
         const isPortfolioDetail =
           window.location.pathname.includes("Portfolio_detail");
-
+  
         if (isPortfolioDetail) {
           section.querySelector("h1").innerText = "Portfolio Details";
-          section.querySelector("h2").innerText = "Home -> Portfolio Details";
+  
+          // Update h2 text and include the arrow image
+          const h2 = section.querySelector("h2");
+          h2.innerHTML = `Home <span><img src="/assets/images/arrow_svg.svg" class="w-4 md:w-5" /></span> Portfolio Details`;
         } else {
           section.querySelector("h1").innerText = "Portfolio";
-          section.querySelector("h2").innerText = "Home -> Portfolio";
+  
+          // Update h2 text and include the arrow image
+          const h2 = section.querySelector("h2");
+          h2.innerHTML = `Home <span><img src="/assets/images/arrow_svg.svg" class="w-4 md:w-5" /></span> Portfolio`;
         }
       } else {
         console.error("Hero container element not found.");
@@ -87,6 +93,7 @@ async function loadContent() {
     // Hide loader once content is loaded or an error has occurred
     loader.classList.add("hidden");
   }
+  
 }
 
 document.addEventListener("DOMContentLoaded", loadContent);

@@ -1153,12 +1153,12 @@ video {
   height: 30%;
 }
 
-.h-\[70vh\] {
-  height: 70vh;
+.h-\[40vh\] {
+  height: 40vh;
 }
 
-.h-\[80vh\] {
-  height: 80vh;
+.h-\[70vh\] {
+  height: 70vh;
 }
 
 .h-auto {
@@ -2591,6 +2591,10 @@ body{
     height: 40%;
   }
 
+  .md\:h-\[80vh\] {
+    height: 80vh;
+  }
+
   .md\:h-auto {
     height: auto;
   }
@@ -2609,6 +2613,10 @@ body{
 
   .md\:w-16 {
     width: 4rem;
+  }
+
+  .md\:w-5 {
+    width: 1.25rem;
   }
 
   .md\:w-\[12vw\] {
