@@ -132,7 +132,7 @@ background-image: url('../images/Home_Service_bg.webp');
 
 /* Cursor */
 .txt-type > .txt {
-    border-right: .5rem solid #1D233A;
+    border-right: .3rem solid #1D233A;
 }
 
 @media(min-width: 1200px) {

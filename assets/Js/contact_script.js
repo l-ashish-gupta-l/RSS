@@ -1,6 +1,6 @@
 import {
   initializeSidebar,
-  setupScrollEffect,
+  // setupScrollEffect,
 } from "./about_script.js";
 
 async function loadContent() {
@@ -29,6 +29,7 @@ async function loadContent() {
         document.querySelectorAll(".link").forEach((link) => {
           link.classList.add("text-white");
         });
+        document.querySelector("#main-navbar").classList.add("absolute")
         const quoteBtn = document.querySelector(".quoetebtn");
         if (quoteBtn) {
           quoteBtn.classList.replace("bg-[#7432FF]", "bg-[#1D233A]");
@@ -36,7 +37,7 @@ async function loadContent() {
 
         // Initialize sidebar and dropdowns
         initializeSidebar();
-        setupScrollEffect();
+        // setupScrollEffect();
       } else {
         console.error("Navbar or footer container element not found.");
       }
